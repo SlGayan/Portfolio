@@ -1,5 +1,9 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
+import { TypeAnimation } from 'react-type-animation';
+
+
 
 const HeroSection = () => {
   return (
@@ -8,8 +12,29 @@ const HeroSection = () => {
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <div className="col-span-7 place-self-center text-center sm:text-center">
           <h1 className='text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold'>
-          <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 '> Hello,I`m {""}</span>
-            Gayan
+          <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 '> Hello,I`m {""}
+          </span>
+          <br/>
+
+            
+          <TypeAnimation
+              sequence={[
+                // Same substring at the start will only be typed out once, initially
+                'Web developer',
+                1000, // wait 1s before replacing "Mice" with "Hamsters"
+                'Ui/Ux ',
+                1000,
+                'engineer',
+                1000,
+                'html ',
+                1000
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+            />
+
+
           </h1>
           <p className='text-[#adb7be] text-base sm:text-lg'>Lorem ipsum dolor sit, amet consectetur aiji</p>
           <div>
